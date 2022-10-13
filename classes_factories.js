@@ -65,6 +65,7 @@ class Person{
 }
 
 // ============ Create a Story ============
+
 // 1.
 const timmy = new Person("Timmy")
 // 2.
@@ -124,4 +125,24 @@ timmy.eat()
 timmy.excerise()
 timmy.excerise()
 
-console.log(timmy)
+// console.log(timmy)
+
+// ============ Chef Make Dinners ============
+
+class Dinner{
+    constructor(appetizerParam, entreeParam, dessertParam){
+    this.Appetizer = appetizerParam
+    this.Entree = entreeParam
+    this.Dessert = dessertParam
+    }
+}
+class Chef {
+    static createDinner(meal1, meal2, meal3){
+        console.log(new Dinner(meal1, meal2, meal3))
+        
+    }
+}
+
+Chef.createDinner("Salad", "Chicken Alfredo", "Ice Cream Sundae")
+Chef.createDinner("Plaintains", "Jerk Chicken", "Custard")
+Chef.createDinner("Empandas", "Pernil", "Tres Leches")
