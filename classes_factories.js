@@ -19,6 +19,8 @@ class Hamster{
      }
 }
 
+// ============ Person ============
+
 class Person{
     constructor(nameParam){
         this.Name = nameParam
@@ -41,6 +43,13 @@ class Person{
     greet(){
         console.log(`Hello, I am ${this.Name}!`)
     }
+    eat(){
+        this.Weight++
+        this.Mood++
+    }
+    excerise(){
+        this.Weight--
+    }
     ageUp(){
         this.Age++
         this.Height++
@@ -51,6 +60,68 @@ class Person{
     buyHamster(hamster){
         this.Hamsters.push(hamster)
         this.Mood+=10
-        this.BankAccount-=getPrice()
+        this.BankAccount-=hamster.getPrice()
     }
 }
+
+// ============ Create a Story ============
+// 1.
+const timmy = new Person("Timmy")
+// 2.
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+// 3.
+timmy.eat()
+timmy.eat()
+timmy.eat()
+timmy.eat()
+timmy.eat()
+// 4.
+timmy.excerise()
+timmy.excerise()
+timmy.excerise()
+timmy.excerise()
+timmy.excerise()
+// 5. 
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+// 6.
+const gus = new Hamster("Gus")
+// 7.
+gus.Owner+="Timmy"
+// 8.
+timmy.buyHamster(gus)
+// 9.
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+// 10.
+timmy.eat()
+timmy.eat()
+// 11.
+timmy.excerise()
+timmy.excerise()
+
+console.log(timmy)
